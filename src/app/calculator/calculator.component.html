@@ -27,6 +27,15 @@
     <div>Division is {{n1/n2}}</div>
     </div> -->
  </form>
+ <form>
+    <div class="bg-primary w-50 p-5 m-5 text-light">
+        <h2>Counter Application</h2>
+        <p>Count is {{counter}}</p>
+        <button type="button" (click)="increment ()" class="btn btn-info" > Increment</button>
+        <button type="button" (click)="decrement()" class="btn btn-info" [ngStyle]="{'margin-left':'10pt'}"> 
+            Decrement</button>
+    </div>
+ </form>
 </div>
 
 

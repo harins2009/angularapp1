@@ -11,6 +11,15 @@ import { FormsModule } from '@angular/forms';
 export class CalculatorComponent {
    @Input() n1:number=0;
    @Input() n2:number=0;
+   @Input() counter:number=0;
+
+   increment (){
+    this.counter++;
+   }
+
+   decrement(){
+    this.counter--;
+   }
 
    addition(){
     alert('addition is '+(this.n1+this.n2))
