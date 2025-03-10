@@ -1,0 +1,105 @@
+<div class="container">
+    <div>
+
+        <h1>User table</h1>
+        <table class="table table-bordered table-striped bg-dark text-light">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Salary
+                </th>
+            </tr>
+            <tr *ngFor="let u of user">
+                <td *ngIf="u.userSalary>=20000">{{u.userId}}</td>
+                <td *ngIf="u.userSalary>=20000">{{u.userName}}</td>
+                <td *ngIf="u.userSalary>=20000">{{u.userSalary}}</td>
+            </tr>
+        </table>
+    </div>
+
+      <h2>Using NgIf saalary >3000</h2>
+    <table class="table table-bordered table-striped bg-dark text-light">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Salary
+            </th>
+        </tr>
+        <tr *ngFor="let u of users">
+            <td *ngIf="u.userSalary>=30000">{{u.userId}}</td>
+            <td *ngIf="u.userSalary>=30000">{{u.userName}}</td>
+            <td *ngIf="u.userSalary>=30000">{{u.userSalary}}</td>
+            
+        </tr>
+    </table>
+
+
+<div>
+    <h2>Without ngIf for users</h2>
+    <table class="table table-bordered table-striped bg-dark text-light">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Salary
+            </th>
+        </tr>
+        <tr *ngFor="let u of users">
+            <td >{{u.userId}}</td>
+            <td >{{u.userName}}</td>
+            <td >{{u.userSalary}}</td>
+            
+        </tr>
+    </table>
+
+</div>
+
+<div>
+    <h2>With ngSwitch case for users</h2>
+    <table class="table table-bordered table-striped bg-dark text-light">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Position
+            </th>
+            <th>
+                Salary
+            </th>
+        </tr>
+        <tr *ngFor="let u of users">
+           
+            <td >{{u.userId}}</td>
+            <td>{{u.userName}}</td>
+            <td ><div [ngSwitch]="u.userName"  class="table table-bordered table-striped bg-dark text-light">
+                 <span *ngSwitchCase="'hari parsad'" >Manager</span>
+                 <span *ngSwitchCase="'ajit parsad'" >Cashier</span>
+                 <span *ngSwitchCase="'suresh parsad'" >Engineer</span>
+                 <span *ngSwitchDefault >No Post</span>
+            </div>
+            </td>    
+            <td >{{u.userSalary}}</td>
+        
+        </tr>
+    </table>
+
+</div>
+</div>

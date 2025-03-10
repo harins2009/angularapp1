@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="card bg-light mb-4">
+        <div class="card-body">
+            <h1 class="card-title text-center mb-4">Employee Details</h1>
+            <p class="card-text"><strong>ID:</strong> {{id}}</p>
+            <p class="card-text"><strong>Name:</strong> {{name}}</p>
+            <p class="card-text"><strong>Salary:</strong> {{salary}}</p>
+           
+            <h2 class="card-title mt-4">Employee Address</h2>
+            <ul class="list-unstyled">
+                <li><strong>Address ID:</strong> {{address.addr_id}}</li>
+                <li><strong>Location:</strong> {{address.location}}</li>
+                <li><strong>City:</strong> {{address.city}}</li>
+                <li><strong>State:</strong> {{address.state}}</li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-bordered table-striped">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{name}}</td>
+                        <td>{{salary}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-center table-light"><strong>Address</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Address ID:</strong> {{address.addr_id}}</td>
+                        <td><strong>Location:</strong> {{address.location}}</td>
+                        <td><strong>City:</strong> {{address.city}}, {{address.state}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+ 
