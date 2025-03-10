@@ -5,6 +5,7 @@ import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PipeExampleComponent } from "./pipe-example/pipe-example.component";
+import { PowerPipe } from './power.pipe';
 
 @Component({
   selector: 'app-root',

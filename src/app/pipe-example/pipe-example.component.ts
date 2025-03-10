@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Insurance } from './model/insurance';
 import { insurancedata } from './Data/insurance_data';
 import { CommonModule } from '@angular/common';
+import { PowerPipe } from '../power.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-pipe-example',
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule, PowerPipe],
   templateUrl: './pipe-example.component.html',
   styleUrl: './pipe-example.component.css'
 })
 export class PipeExampleComponent {
+  @Input() base:number=0;
+  @Input() exponent:number=0;
   insurance:Insurance[];
 
 

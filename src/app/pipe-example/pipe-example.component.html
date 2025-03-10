@@ -20,32 +20,32 @@
             {{user.userId}}
         </td>
      </tr>   
-    <tr>
+    <tr class="bg-dark text-light">
             <td>USERNAME</td>
         <td>
            
             {{user.userName}}
         </td>
         </tr>
-        <tr>
+        <tr class="bg-dark text-light">
             <td>DATE OF BIRTH</td>
         <td>
             {{user.dob}}
         </td>
         </tr>
-        <tr>
+        <tr class="bg-dark text-light">
             <td>CITY</td>
         <td>
             {{user.address.city}}
         </td>
         </tr>
-        <tr>
+        <tr class="bg-dark text-light">
             <td>LOCATION</td>
         <td>
             {{user.address.location}}
         </td>
         </tr>
-        <tr>
+        <tr class="bg-dark text-light">
             <td>STATE</td>
         <td>
             {{user.address.state}}
@@ -78,17 +78,32 @@
         <th>
             Premium Amount
         </th>
-
     </tr>
         <tr *ngFor="let ins of insurance">
             <td>{{ins.id}}</td>
-            <td>{{ins.name |uppercase}}</td>
+            <td>{{ins.name |uppercase|slice:1:3}}</td>
             <td>{{ins.year}}</td>
-            <td>{{ins.startDate | date:'fullDate'}}</td>
+            <td>{{ins.startDate | date:'fullDate'|uppercase}}</td>
             <td>{{ins.maturityDate |date}}</td>
             <td>{{ins.premiumAmt|currency:'Rs'}}</td>
             <td>{{ins.premiumAmt|currency:'₹'}}</td>
         </tr>
-       
     </table>
+
+    <form class="bg bg-danger p-5 m-5 w-10">
+        <div>
+        <label>Enter base</label>
+        <input [(ngModel)]="base" [ngModelOptions]="{standalone:true}">
+        </div>
+
+        <div>
+            <label>
+                Enter Exponent
+            </label>
+            <input [(ngModel)]="exponent" [ngModelOptions]="{standalone:true}">
+        </div>
+
+        
+    <p>Power of {{base}} with exponent {{exponent}} is {{base|power:exponent}}</p>
+    </form>
 </div>
