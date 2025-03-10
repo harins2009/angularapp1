@@ -1,4 +1,10 @@
 <div class="container"> 
+    <div>
+    <span class="m-5 bg-info p-2" style="width:70pt; border-radius:10pt">{{date}}</span>
+    
+    <span class="m-5 bg-info p-2" style="width:70pt; border-radius:10pt; float:right"  (load)="time1"
+    >{{time1.toLocaleTimeString()}}</span>
+</div>
  <form class="bg-info p-5 m-5 w-75">
     <div class="form-group mt-2" >
     <label>
@@ -32,7 +38,7 @@
         <h2>Counter Application</h2>
         <p>Count is {{counter}}</p>
         <button type="button" (click)="increment ()" class="btn btn-info" > Increment</button>
-        <button type="button" (click)="decrement()" class="btn btn-info" [ngStyle]="{'margin-left':'10pt'}"> 
+        <button type="button" (click)="decrement()" class="btn btn-info" [ngStyle]="{'margin-right':'10pt'}"> 
             Decrement</button>
     </div>
  </form>

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-calculator',
@@ -13,6 +14,13 @@ export class CalculatorComponent {
    @Input() n2:number=0;
    @Input() counter:number=0;
 
+   date:string=new Date().toLocaleDateString();
+  //  time:string=new Date().toLocaleTimeString();
+   time1=new Date();
+  interval = setInterval(() => {
+    this.time1=new Date();
+
+  },1000);
    increment (){
     this.counter++;
    }
@@ -21,6 +29,7 @@ export class CalculatorComponent {
     this.counter--;
    }
 
+   
    addition(){
     alert('addition is '+(this.n1+this.n2))
    }
