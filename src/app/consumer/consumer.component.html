@@ -1,1 +1,69 @@
-<p>consumer works!</p>
+<div>
+    <form class="container" class="bg-success text-light p-5 m-5 w-75" style="border-radius: 20pt;" [formGroup]="formgroup" >
+
+
+        <div class="form-group">
+            <label> Enter Id</label>
+            <br>
+            <input class="from-control" [formControl]="id">
+            <span [hidden]="!id.hasError('required')" class="text-warning">  
+                id is blank
+            </span>
+            <span [hidden]="!id.hasError('minlength')" class="text-warning">  
+                id must of minimum 3 digits
+            </span>
+            <span [hidden]="!id.hasError('maxlength')" class="text-warning">  
+                id must of maximum 10 digits
+            </span>
+        </div>
+ <br>
+        <div class="form-group">
+            <label> Enter Name</label>
+            <br>
+            <input class="from-control" [formControl]="name">
+            <span [hidden]="!name.hasError('required')" class="text-warning">  
+                Name is blank
+            </span>
+            <span [hidden]="!name.hasError('minlength')" class="text-warning">  
+                Name must of minimum 5 characters
+            </span>
+            <span [hidden]="!name.hasError('maxlength')" class="text-warning">  
+                id must of maximum 20 characters
+            </span>
+        </div>
+        <br>
+        <div class="form-group">
+            <label> Enter Salary</label>
+            <br>
+            <input class="from-control" [formControl]="salary">
+            <span [hidden]="!salary.hasError('required')" class="text-warning">  
+                salary is blank
+            </span>
+            <span [hidden]="!salary.hasError('minlength')" class="text-warning">  
+                id must of minimum 4 digits
+            </span>
+            <span [hidden]="!salary.hasError('maxlength')" class="text-warning">  
+                id must of maximum 10 digits
+            </span>
+        </div>
+        <br>
+        <div class="form-group">
+            <label> Enter Location</label>
+            <br>
+            <input class="from-control" [formControl]="location">
+            <span [hidden]="!location.hasError('required')" class="text-warning">  
+                Location is blank
+            </span>
+            <span [hidden]="!location.hasError('minlength')" class="text-warning">  
+                Location must of minimum 5 characters
+            </span>
+            <span [hidden]="!location.hasError('maxlength')" class="text-warning">  
+               Location must be of maximum 30  characters
+            </span>
+        </div>
+        <div class="mt-3">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="clear" class="btn btn-primary" style="margin-left :10pt;">Clear</button>
+        </div>
+    </form>
+</div>
