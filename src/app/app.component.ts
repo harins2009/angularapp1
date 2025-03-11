@@ -6,10 +6,11 @@ import { ProductComponent } from './product/product.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { PipeExampleComponent } from "./pipe-example/pipe-example.component";
 import { PowerPipe } from './power.pipe';
+import { CustomerComponent } from "./customer/customer.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, EmployeeComponent, UserComponent, ProductComponent, CalculatorComponent, PipeExampleComponent],
+  imports: [RouterOutlet, EmployeeComponent, UserComponent, ProductComponent, CalculatorComponent, PipeExampleComponent, CustomerComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
